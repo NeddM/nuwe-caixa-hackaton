@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "tp tp tp"
+    "mi mi mi"
+    "sl sl sl"
+    "gr gr gr"
+    "na na na";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f2f6f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.toplogo {
+  grid-area: tp;
+  margin-left: 8%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toplogo h1 {
+  color: #4a35c5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.miniinfo {
+  grid-area: mi;
+  margin-left: 5%;
+}
+
+.miniinfo h2 {
+  font-weight: 600;
+  margin: 0px auto;
+  margin-bottom: -15px;
+}
+
+.slider {
+  grid-area: sl;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.sli {
+  text-align: center;
+  margin: 10px 5%;
+  padding: 0 15px;
+  background-color: white;
+  box-shadow: 2px 10px 10px lightgray;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.sli p {
+  color: #6979f8;
+  font-size: 40px;
+  margin: -10px -10px;
+}
+
+.sli h5 {
+  font-weight: lighter;
+}
+
+.grafico {
+  grid-area: gr;
+}
+
+.centrografico {
+  background-color: white;
+  margin: 20px 20px;
+  padding: 0 15px;
+  height: 300px;
+  box-shadow: 2px 10px 10px lightgray;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.centrografico h3{
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.chbtn{
+  display: flex;
+  justify-content: center;
+}
+
+.chmoment{
+  margin: 20px auto;
+  color: #6979f8;
+}
+
+#chactive{
+  border-bottom: #6979f8 5px solid;
+}
+
+.dibujo{
+  height: 180px;
+  display: grid;
+  grid-template-areas: 
+  "n1 no no no no no no"
+  "n2 no no no no no no"
+  "n3 no no no no no no"
+  "n4 no no no no no no"
+  "n5 no no no no no no"
+  "np ja fe mr ap my ju"
+  ;
+}
+
+.no{
+  grid-area: no;
+}
+.np{
+  grid-area: np;
+}
+.n1{
+  grid-area: n1;
+}
+.n2{
+  grid-area: n2;
+}
+.n3{
+  grid-area: n3;
+}
+.n4{
+  grid-area: n4;
+}
+.n5{
+  grid-area: n5;
+}
+.ja{
+  grid-area: ja;
+}
+.fe{
+  grid-area: fe;
+}
+.mr{
+  grid-area: mr;
+}
+.ap{
+  grid-area: ap;
+}
+.my{
+  grid-area: my;
+}
+.ju{
+  grid-area: ju;
+}
+
+
+
+.navegador {
+  border: 1px solid black;
+  grid-area: na;
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
+  background-color: #2d14c4;
   color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.btnnav {
+  margin: 20px 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.group {
+  display: flex;
+  width: 16px;
+  height: 19px;
+}
+
+#l1 {
+  width: 4px;
+  height: 19px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+#l2 {
+  width: 4px;
+  height: 15px;
+  margin-left: 3px;
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+#l3 {
+  width: 4px;
+  height: 8px;
+  margin-left: 3px;
+  margin-top: 11px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+#ex1 {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#ex2 {
+  position: absolute;
+  align-self: center;
+  margin-top: 2px;
+  margin-left: 3px;
+  transform: rotate(-35deg);
+  width: 10.06px;
+  height: 4.06px;
+  background-color: #2d14c4;
+  z-index: 3;
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+}
+
+#vv1 {
+  text-align: center;
+  height: 10.39px;
+  width: 10px;
+  margin-left: 3px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 3;
+}
+
+#vv2 {
+  position: absolute;
+  text-align: center;
+  height: 19px;
+  width: 19px;
+  margin-top: 12px;
+  margin-left: -1px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#vv3{
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: -10px;
+  background-color: #2d14c4;
+  z-index: 2;
 }
